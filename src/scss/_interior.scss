@@ -1,0 +1,173 @@
+.interior {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 26rem;
+        top: 12rem;
+        background-image: url(/img/legato.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 53rem;
+        width: 45rem;
+        z-index: -1;
+    }
+
+    &__title {
+        max-width: 71.6rem;
+    }
+
+    &__subtitle {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        color: var(--text-color);
+        max-width: 88.6rem;
+    }
+
+    &__container {
+        margin-top: 7.9rem;
+        display: grid;
+        grid-template-columns: 45rem 45rem 45rem;
+        grid-template-rows: 49rem 49rem;
+        grid-gap: 8rem;
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        max-height: 49rem;
+        transition: 0.5s;
+    }
+
+    &__inner {
+        padding: 4rem;
+        overflow: hidden;
+        position: relative;
+        transition: 0.5s;
+        width: 100%;
+        left: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -20rem;
+            bottom: -20rem;
+            background-color: #fff;
+            border-radius: 100%;
+            width: 40rem;
+            height: 40rem;
+            z-index: 0;
+        }
+
+        &>img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            border-radius: 1.7rem;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        &>h4 {
+            position: relative;
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+            transition: 1s;
+            margin-top: 325px;
+        }
+
+        &>p {
+            position: relative;
+            font-weight: 400;
+            font-size: 2.4rem;
+            line-height: 3.6rem;
+            color: var(--text-color);
+            transition: 0.5s;
+            opacity: 0;
+            transition: opacity 0.5s, all 0s;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        right: 4rem;
+        top: 4rem;
+        max-width: 6.6rem;
+        max-height: 6.6rem;
+        background-color: var(--primary-color);
+        padding: 2rem;
+        border-radius: 100%;
+        transition: 0.4s;
+
+        &>svg {
+            fill: #fff;
+            width: 2.2rem;
+            height: 2.2rem;
+            transition: 0.4s;
+        }
+    }
+
+}
+
+.active {
+    .interior__item {
+        overflow: visible;
+        transition: 0.5s;
+    }
+
+    .interior__inner {
+        // background-color: red;
+        box-sizing: content-box;
+        width: 201%;
+        max-height: 41rem;
+        height: 41rem;
+        overflow: visible;
+        z-index: 4;
+
+
+        &::before {
+            display: none;
+        }
+
+        &>h4 {
+            z-index: 5;
+            position: relative;
+            margin-top: 1.6rem;
+            transition: 1s;
+            max-width: 60rem;
+        }
+
+        &>p {
+            display: block;
+            margin-top: 14rem;
+            opacity: 1;
+            transition-delay: opacity 1s;
+            transition: opacity 3.5s, all 1s;
+        }
+
+    }
+
+    .interior__inner-right {
+        left: -54rem;
+    }
+
+    .interior__btn {
+        transition: 0.4s;
+        z-index: 77;
+
+        &>svg {
+            transform: rotate(45deg);
+            transition: 0.4s;
+        }
+    }
+}
