@@ -22,6 +22,8 @@
 .thickness__card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .thickness__card-icon {

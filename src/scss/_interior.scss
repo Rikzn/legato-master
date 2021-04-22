@@ -33,24 +33,36 @@
         grid-template-columns: 45rem 45rem 45rem;
         grid-template-rows: 49rem 49rem;
         grid-gap: 8rem;
+        align-items: stretch;
+
+        @include breakpoint(laptop) {
+            grid-gap: 4rem;
+        }
+
+        @include breakpoint(tablet) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 49rem 49rem 49rem;
+        }
     }
 
     &__item {
         position: relative;
         border-radius: 1.7rem;
         display: flex;
-        flex-direction: column;
-        max-height: 49rem;
         transition: 0.5s;
     }
 
     &__inner {
         padding: 4rem;
         overflow: hidden;
-        position: relative;
-        transition: 0.5s;
+        position: absolute;
         width: 100%;
+        height: 100%;
         left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: 0.5s;
 
         &::before {
             content: '';
@@ -83,7 +95,7 @@
             font-size: 2.8rem;
             line-height: 3.4rem;
             transition: 1s;
-            margin-top: 325px;
+            // margin-top: 325px;
         }
 
         &>p {
@@ -95,6 +107,8 @@
             transition: 0.5s;
             opacity: 0;
             transition: opacity 0.5s, all 0s;
+            // display: none;
+            max-height: 0;
         }
     }
 
@@ -126,14 +140,22 @@
     }
 
     .interior__inner {
-        // background-color: red;
         box-sizing: content-box;
         width: 201%;
-        max-height: 41rem;
-        height: 41rem;
+        height: 84%;
         overflow: visible;
         z-index: 4;
+        position: absolute;
+        justify-content: flex-start;
+        transition: 0.5s;
 
+        @include breakpoint(laptop) {
+            width: 191%;
+        }
+
+        @include breakpoint(tablet) {
+            width: 194%;
+        }
 
         &::before {
             display: none;
@@ -143,7 +165,8 @@
             z-index: 5;
             position: relative;
             margin-top: 1.6rem;
-            transition: 1s;
+            transition: 0.3s;
+            // transition-delay: 1s;
             max-width: 60rem;
         }
 
@@ -151,14 +174,20 @@
             display: block;
             margin-top: 14rem;
             opacity: 1;
-            transition-delay: opacity 1s;
-            transition: opacity 3.5s, all 1s;
+            // transition-delay: opacity 1s;
+            // transition: opacity 3.5s, all 1s;
+            // transition: 0.5s;
+            max-height: min-content;
         }
 
     }
 
     .interior__inner-right {
         left: -54rem;
+
+        @include breakpoint(laptop) {
+            left: -49rem;
+        }
     }
 
     .interior__btn {

@@ -35,6 +35,9 @@
 
 .photo-comparison__link {
     align-self: flex-start;
+    &::before {
+        
+    }
 }
 
 .photo-comparison__slider {

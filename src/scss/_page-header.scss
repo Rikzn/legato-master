@@ -33,12 +33,28 @@
     position: relative;
     margin-right: 2.5rem;
     flex-shrink: 0;
+
+    @include breakpoint(desktop) {
+        margin-right: 2rem;
+    }
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
 }
 
 .page-header__logo-image {
     width: 23rem;
     display: block;
     height: auto;
+
+    @include breakpoint(desktop) {
+        width: 22rem;
+    }
+
+    @include breakpoint(laptop) {
+        width: 18rem;
+    }
 
     &:last-child {
         position: absolute;
@@ -66,7 +82,7 @@
 
 .page-header__nav {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
 
 }
 
@@ -82,16 +98,17 @@
     margin: .5rem;
     margin-right: 1.5rem;
     color: white;
+
     &>div {
         transition: 0.2s;
     }
-    
+
     &::before {
         content: attr(data-text);
         display: block;
         position: absolute;
         left: 0;
-        top: 110%;
+        top: 140%;
         width: 100%;
         height: 100%;
         transition: 0.2s;
@@ -102,8 +119,9 @@
             transform: translateY(-100%);
             transition: 0.2s;
         }
+
         &::before {
-            transform: translateY(-110%);
+            transform: translateY(-140%);
             transition: 0.2s;
         }
     }
@@ -145,6 +163,14 @@
     text-align: right;
     grid-column-gap: 2.2rem;
     grid-row-gap: .5rem;
+
+    @include breakpoint(desktop) {
+        margin-left: 2rem;
+    }
+
+    @include breakpoint(laptop) {
+        grid-column-gap: 1.5rem;
+    }
 }
 
 .page-header__phone-link {
@@ -157,13 +183,23 @@
     justify-self: flex-end;
     color: white;
 
+    @include breakpoint(desktop) {
+        font-size: 1.9rem;
+    }
+
+    @include breakpoint(laptop) {
+        font-size: 1.8rem;
+    }
+
     &:link,
     &:visited {
         color: white;
     }
+
     &:hover {
         transition: 0.3s;
     }
+
     .page-header.fixed & {
         color: var(--text-color);
 
