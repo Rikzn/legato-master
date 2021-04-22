@@ -69,6 +69,24 @@
 
 .intro__calculate-btn {
     margin-right: 2.4rem;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        left: -5rem;
+        top: 50%;
+        transform: translateY(-50%) skew(-14deg, -25deg);
+        background-color: rgba($color: #fff, $alpha: 0.2);
+        width: 3.5rem;
+        height: 150%;
+    }
+    &:hover {
+        &::before {
+            transform: translateY(-50%) translateX(40rem) skew(-14deg,-25deg);
+            transition: 0.8s;
+        }
+    }
 }
 
 .intro__get-consultation {

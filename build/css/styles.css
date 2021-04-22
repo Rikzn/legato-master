@@ -985,7 +985,7 @@ html {
   @media only screen and (max-width: 1600px) {
     html {
       font-size: 9px; } }
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1440px) {
     html {
       font-size: 8px; } }
   @media only screen and (max-width: 1200px) {
@@ -1327,7 +1327,7 @@ select:-webkit-autofill:focus {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
-  margin-right: 2.9rem;
+  margin-right: 2.5rem;
   flex-shrink: 0; }
 
 .page-header__logo-image {
@@ -1365,16 +1365,41 @@ select:-webkit-autofill:focus {
       flex-wrap: wrap; }
 
 .page-header__nav-link {
+  position: relative;
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.4rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+  overflow: hidden;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin: .5rem;
-  margin-right: 1.9rem;
+  margin-right: 1.5rem;
   color: white; }
+  .page-header__nav-link > div {
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+  .page-header__nav-link::before {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+  .page-header__nav-link:hover > div {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+  .page-header__nav-link:hover::before {
+    -webkit-transform: translateY(-110%);
+            transform: translateY(-110%);
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
   .page-header__nav-link:link, .page-header__nav-link:visited {
     color: white; }
   .page-header.fixed .page-header__nav-link {
@@ -1390,7 +1415,7 @@ select:-webkit-autofill:focus {
 .page-header__contacts-block {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-left: 2.9rem;
+  margin-left: 2.6rem;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
@@ -1410,6 +1435,9 @@ select:-webkit-autofill:focus {
   color: white; }
   .page-header__phone-link:link, .page-header__phone-link:visited {
     color: white; }
+  .page-header__phone-link:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
   .page-header.fixed .page-header__phone-link {
     color: var(--text-color); }
     .page-header.fixed .page-header__phone-link:link, .page-header.fixed .page-header__phone-link:visited {
@@ -1499,7 +1527,24 @@ select:-webkit-autofill:focus {
           align-items: center; }
 
 .intro__calculate-btn {
-  margin-right: 2.4rem; }
+  margin-right: 2.4rem;
+  position: relative;
+  overflow: hidden; }
+  .intro__calculate-btn::before {
+    content: '';
+    position: absolute;
+    left: -5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%) skew(-14deg, -25deg);
+            transform: translateY(-50%) skew(-14deg, -25deg);
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 3.5rem;
+    height: 150%; }
+  .intro__calculate-btn:hover::before {
+    -webkit-transform: translateY(-50%) translateX(40rem) skew(-14deg, -25deg);
+            transform: translateY(-50%) translateX(40rem) skew(-14deg, -25deg);
+    -webkit-transition: 0.8s;
+    transition: 0.8s; }
 
 .intro__get-consultation {
   display: -webkit-inline-box;
@@ -3712,7 +3757,7 @@ select:-webkit-autofill:focus {
   .interior::before {
     content: '';
     position: absolute;
-    right: 26rem;
+    right: 2%;
     top: 12rem;
     background-image: url(/img/legato.png);
     background-repeat: no-repeat;

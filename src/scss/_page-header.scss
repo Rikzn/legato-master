@@ -31,7 +31,7 @@
 .page-header__logo {
     flex-shrink: 0;
     position: relative;
-    margin-right: 2.9rem;
+    margin-right: 2.5rem;
     flex-shrink: 0;
 }
 
@@ -71,16 +71,42 @@
 }
 
 .page-header__nav-link {
+    position: relative;
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.4rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-
+    overflow: hidden;
     flex-shrink: 0;
     margin: .5rem;
-    margin-right: 1.9rem;
+    margin-right: 1.5rem;
     color: white;
+    &>div {
+        transition: 0.2s;
+    }
+    
+    &::before {
+        content: attr(data-text);
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 110%;
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+    }
+
+    &:hover {
+        &>div {
+            transform: translateY(-100%);
+            transition: 0.2s;
+        }
+        &::before {
+            transform: translateY(-110%);
+            transition: 0.2s;
+        }
+    }
 
     &:link,
     &:visited {
@@ -111,7 +137,7 @@
 
 .page-header__contacts-block {
     flex-shrink: 0;
-    margin-left: 2.9rem;
+    margin-left: 2.6rem;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
@@ -135,7 +161,9 @@
     &:visited {
         color: white;
     }
-
+    &:hover {
+        transition: 0.3s;
+    }
     .page-header.fixed & {
         color: var(--text-color);
 

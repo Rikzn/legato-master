@@ -175,7 +175,7 @@
             @content;
         }
     } @else if $class == desktop {
-        @media only screen and (max-width: (1400px)) {
+        @media only screen and (max-width: (1440px)) {
             @content;
         }
     } @else if $class == laptop {
