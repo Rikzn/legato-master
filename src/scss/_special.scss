@@ -27,11 +27,39 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2.5rem;
     grid-auto-rows: minmax(auto, 24rem);
+
+    @include breakpoint(small-tablet) {
+        overflow-x: auto;
+        max-width: none;
+        display: -webkit-box;
+        flex-direction: row;
+        grid-auto-rows: auto;
+        grid-template-columns: auto;
+        scrollbar-width: none;
+        margin-left: -28px;
+        padding-left: 29px;
+        width: 115%;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+
+
+
+    }
 }
 
 .special__promo-list-item {
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+        width: 250px;
+
+        &:last-child {
+            padding-right: 15px;
+        }
+    }
 }
 
 .special__promo-card,
@@ -47,6 +75,7 @@
     background-color: #fff;
     color: var(--text-color);
     transition: background-color .2s, color .2s;
+
     &:link,
     &:visited {
         color: var(--text-color);
@@ -65,7 +94,7 @@
     font-size: 2.8rem;
     line-height: 120%;
     font-family: var(--nunito);
-  
+
     &:link,
     &:visited {
         color: white;

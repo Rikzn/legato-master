@@ -82,7 +82,11 @@
 
 .page-header__nav {
     display: flex;
+
     // flex-wrap: wrap;
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
 
 }
 

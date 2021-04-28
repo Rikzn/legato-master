@@ -42,6 +42,14 @@
 
 .intro__text-content {
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+        margin-top: 16.9rem;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        margin-top: 13.9rem;
+    }
 }
 
 .intro__content {
@@ -60,6 +68,14 @@
     margin-bottom: 5.5rem;
     font-family: var(--nunito);
     max-width: 70rem;
+
+    @include breakpoint(mobile) {
+        font-size: 26px;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .intro__buttons {
@@ -71,6 +87,7 @@
     margin-right: 2.4rem;
     position: relative;
     overflow: hidden;
+
     &::before {
         content: '';
         position: absolute;
@@ -81,9 +98,10 @@
         width: 3.5rem;
         height: 150%;
     }
+
     &:hover {
         &::before {
-            transform: translateY(-50%) translateX(40rem) skew(-14deg,-25deg);
+            transform: translateY(-50%) translateX(40rem) skew(-14deg, -25deg);
             transition: 0.8s;
         }
     }
@@ -103,6 +121,12 @@
     color: var(--text-color);
     transition: color .2s, background-color .2s;
 
+    @include breakpoint(mobile) {
+        span {
+            display: none;
+        }
+    }
+
     &:link,
     &:visited {
         color: var(--text-color);
@@ -116,6 +140,10 @@
         fill: var(--primary-color);
         margin-right: 1.3rem;
         transition: fill .2s;
+
+        @include breakpoint(mobile) {
+            margin-right: 0;
+        }
     }
 
     .no-touch &:hover,
@@ -133,11 +161,29 @@
     margin-top: auto;
     display: flex;
     align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        grid-row-gap: 32px;
+        margin-top: 6.2rem;
+        grid-column-gap: 15%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        grid-row-gap: 11px;
+        margin-top: 4.2rem;
+        grid-column-gap: 7%;
+    }
 }
 
 .intro__features-list-item {
     flex-basis: 17.4rem;
     margin-right: 6.5rem;
+
+    @include breakpoint(supersmall-mobile) {
+        margin-right: 0;
+    }
 
     &:last-child {
         margin-right: 0;

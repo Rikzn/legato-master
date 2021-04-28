@@ -16,12 +16,34 @@
     object-position: right bottom;
     margin-right: -1rem;
     z-index: -1;
+
+    @include breakpoint(small-tablet) {
+        right: 50%;
+        bottom: 72%;
+        height: 29rem;
+        transform: translateX(50%) translateY(50%);
+    }
+
+    @include breakpoint(mobile) {
+        bottom: 70%;
+        height: 23rem;
+    }
+
 }
 
 .how-to-choose__row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column-gap: 8rem;
     display: grid;
+
+    @include breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(small-tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 .how-to-choose__card {
@@ -30,6 +52,16 @@
     border-radius: 3rem;
     padding: 5rem 7rem;
     color: var(--text-color);
+
+    @include breakpoint(mobile) {
+        padding: 3rem 1.6rem;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 21px;
+        line-height: 4rem;
+        padding: 5rem 2rem;
+    }
 }
 
 .how-to-choose__card-heading {
@@ -80,6 +112,14 @@
     align-items: center;
     font-family: var(--nunito);
     align-self: flex-start;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 18.1rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 23.1rem;
+    }
 }
 
 .how-to-choose__sale-text {
@@ -121,6 +161,26 @@
 .how-to-choose__card-btn {
     margin-right: 2.4rem;
 
+
+    &>svg {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        span {
+            display: none;
+        }
+
+        svg {
+            display: block;
+            width: 3.2rem;
+            height: 3.2rem;
+            flex-shrink: 0;
+            fill: var(--primary-color);
+            transition: fill .2s;
+        }
+    }
+
     &:last-child {
         margin-right: 0;
     }
@@ -143,6 +203,10 @@
     user-select: none;
     border-radius: 2rem;
     border: 1px solid var(--primary-color);
+
+    @include breakpoint(mobile) {
+        padding: 1.4rem;
+    }
 
     &:link,
     &:visited {

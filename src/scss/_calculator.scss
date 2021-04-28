@@ -1,6 +1,11 @@
 .calculator {
     padding: 10rem 0;
     background-color: #f8f8f8;
+
+    @include breakpoint(small-tablet) {
+        padding: 0;
+    }
+
 }
 
 .calculator__card {
@@ -10,11 +15,37 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-column-gap: 8rem;
+
+    @include breakpoint(small-tablet) {
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+        border-radius: 0;
+    }
 }
 
 .calculator__card-col {
     display: flex;
     flex-direction: column;
+
+
+    @include breakpoint(small-tablet) {
+        border-radius: 20px;
+        background-color: #fff;
+
+        &:first-child {
+            margin-bottom: 1.6rem;
+            padding: 12rem 1.5rem 0 1.5rem;
+        }
+
+        &:last-child {
+            padding: 2.4rem 1.5rem 2.4rem 1.5rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 5px;
+    }
 }
 
 .calculator__heading {
@@ -50,10 +81,13 @@
     height: auto;
 
     margin-bottom: -6.4rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 0;
+    }
 }
 
-.calculator__form {
-}
+.calculator__form {}
 
 .calculator__form-fields {
     display: grid;
@@ -100,6 +134,7 @@
         font-size: 1.2rem;
         margin-top: 0.6rem;
     }
+
     .choices {
         background: #f6f6f6;
         font-size: 2rem;
@@ -265,6 +300,7 @@
     justify-content: center;
     border-radius: 0.3rem;
     margin-top: 0.25rem;
+
     svg {
         width: 1.2rem;
         height: 0.8rem;
@@ -282,7 +318,7 @@
     color: #918f90;
 }
 
-.calculator__form-field-checkbox-input:checked ~ .calculator__form-field-checkbox-mark svg {
+.calculator__form-field-checkbox-input:checked~.calculator__form-field-checkbox-mark svg {
     opacity: 1;
 }
 

@@ -16,11 +16,17 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2.8rem;
+
+    @include breakpoint(small-tablet) {
+        grid-template-columns: 1fr;
+
+        &>.faq__col:last-child {
+            display: none;
+        }
+    }
 }
 
-.faq__questions-list {
-   
-}
+.faq__questions-list {}
 
 .faq__questions-list-item {
     break-inside: avoid;
@@ -65,9 +71,11 @@
     flex-shrink: 0;
     margin-left: 2rem;
     transition: transform .3s;
+
     .faq__questions-accordion.active & {
         transform: rotate(45deg);
     }
+
     svg {
         width: 1.6rem;
         height: 1.6rem;
@@ -83,9 +91,23 @@
 
 .faq__questions-accordion-content-inner {
     padding: 2.5rem;
-    
+
     font-size: 2.4rem;
     line-height: 140%;
     padding-right: 3rem;
     max-width: 66rem;
+}
+
+.faq__next {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+        font-size: 14px;
+        line-height: 23px;
+        color: #FF7F56;
+        text-decoration: underline;
+        display: block;
+        margin-top: 3.2rem;
+        cursor: pointer;
+    }
 }

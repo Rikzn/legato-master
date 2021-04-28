@@ -1,0 +1,28 @@
+.menu {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+        width: 32px;
+        height: 10px;
+        cursor: pointer;
+
+        span {
+            width: 32px;
+            height: 2px;
+            background-color: #fff;
+            display: block;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        &:hover {
+            span {
+                transform: rotateY(45deg);
+                transition: 0.3s;
+            }
+        }
+    }
+}

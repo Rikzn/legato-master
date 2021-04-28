@@ -41,11 +41,11 @@ html {
     }
 
     @include breakpoint(small-tablet) {
-        font-size: 6px;
+        font-size: 7px;
     }
 
     @include breakpoint(mobile) {
-        font-size: 10px;
+        font-size: 6px;
     }
 }
 

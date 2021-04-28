@@ -9,7 +9,14 @@
     margin-bottom: 6rem;
     display: flex;
     align-items: center;
+
     &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+        flex-direction: column;
+        align-items: self-start;
         margin-bottom: 0;
     }
 }
@@ -31,6 +38,12 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+
+    @include breakpoint(small-tablet) {
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
 }
 
 .page-footer__copyright {
@@ -39,6 +52,23 @@
     color: rgba(black, 0.2);
     width: 63rem;
     margin-right: 4rem;
+
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
+
+    &-mobile {
+        display: none;
+
+        @include breakpoint(small-tablet) {
+            display: block;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            font-size: 12px;
+            line-height: 16px;
+            color: rgba(black, 0.2);
+        }
+    }
 }
 
 
@@ -49,12 +79,18 @@
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
-    grid-template-areas: 'footer-phone-link footer-whatsapp-link' 'footer-phone-link-text footer-whatsapp-link';
+    grid-template-areas: 'footer-phone-link footer-whatsapp-link''footer-phone-link-text footer-whatsapp-link';
     text-align: right;
     grid-column-gap: 2.2rem;
     grid-row-gap: 0.5rem;
     flex-shrink: 0;
     margin-left: auto;
+
+    @include breakpoint(small-tablet) {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 3.6rem;
+    }
 }
 
 .page-footer__phone-link {
@@ -77,6 +113,7 @@
     height: 4.7rem;
     flex-shrink: 0;
     grid-area: footer-whatsapp-link;
+
     svg {
         width: 100%;
         height: 100%;
@@ -88,12 +125,27 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include breakpoint(small-tablet) {
+        flex-direction: column;
+        align-items: self-start;
+    }
 }
 
 .page-footer__bottom-link {
     font-size: 1.4rem;
     line-height: 2.3rem;
     margin-right: 5rem;
+
+    @include breakpoint(small-tablet) {
+        margin-right: 0;
+        font-size: 14px;
+        margin-bottom: 0.8rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     .no-touch &:hover {
         text-decoration: underline;
@@ -108,6 +160,10 @@
     color: #d1d1d3;
     flex-shrink: 0;
 
+    @include breakpoint(small-tablet) {
+        margin-left: auto;
+    }
+
     &:link,
     &:visited {
         color: #d1d1d3;
@@ -120,5 +176,9 @@
     height: auto;
     margin-left: 1.2rem;
     flex-shrink: 0;
-   margin-top: 0.8rem;
+    margin-top: 0.8rem;
+
+    @include breakpoint(small-tablet) {
+        margin-top: 0;
+    }
 }

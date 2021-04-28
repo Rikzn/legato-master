@@ -10,6 +10,11 @@
     background-color: #fff;
     border-radius: 3rem;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 .photo-comparison__card-col {
@@ -17,27 +22,66 @@
     flex-direction: column;
     flex-grow: 1;
     position: relative;
+
+    @include breakpoint(mobile) {
+        height: 320px;
+
+        &:first-child {
+            margin-bottom: 45px;
+        }
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        height: 212px;
+
+        &:first-child {
+            height: 280px;
+        }
+    }
 }
 
 .photo-comparison__card-content {
     padding: 7.2rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 18px;
+        padding-bottom: 32px;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
 .photo-comparison__heading {
     margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 22px;
+        margin-bottom: 1.6rem;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 16px;
+        line-height: 21px;
+    }
 }
 
 .photo-comparison__text {
     font-size: 2.4rem;
     line-height: 3.6rem;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.4rem;
+    }
 }
 
 .photo-comparison__link {
     align-self: flex-start;
-    &::before {
-        
-    }
+
+    &::before {}
 }
 
 .photo-comparison__slider {
@@ -78,7 +122,7 @@
         transform: translateZ(0);
         backface-visibility: hidden;
         clip-path: polygon(0 0, calc(var(--percentage-shown) * 100%) 0, calc(var(--percentage-shown) * 100%) 100%, 0 100%);
-       
+
     }
 
 
@@ -95,7 +139,7 @@
         z-index: 10;
         user-select: none;
         width: calc(var(--percentage-shown) * 100%);
-       
+
     }
 
     .cd-handle {
@@ -107,11 +151,13 @@
         z-index: 50;
         transform: translateX(50%);
         cursor: pointer;
+
         svg {
             width: 1.2rem;
             height: 2rem;
             fill: white;
             margin-right: 5rem;
+
             &:last-child {
                 margin-right: 0;
             }

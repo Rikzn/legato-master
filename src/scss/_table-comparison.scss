@@ -23,14 +23,15 @@
     tr {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-       
+
         grid-column-gap: 8rem;
         position: relative;
-        
+
     }
 
     tbody tr {
         position: relative;
+
         &::before {
             content: '';
             position: absolute;
@@ -44,6 +45,7 @@
             z-index: -1;
             opacity: 0;
         }
+
         .no-touch &:hover {
             &::before {
                 opacity: 1;
@@ -55,11 +57,16 @@
         font-size: 2rem;
         line-height: 1.2;
         padding: 1.4rem 0;
+
+        @include breakpoint(mobile) {
+            padding: 1rem 0;
+        }
     }
 
     td:first-child {
         display: flex;
         align-items: center;
+
         &::before {
             content: '';
             width: 2.5rem;
@@ -76,6 +83,7 @@
     td:last-child {
         display: flex;
         align-items: center;
+
         &::before {
             content: '';
             width: 1.8rem;
@@ -94,7 +102,7 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 3.5rem;
-    
+
 }
 
 .table-comparison__heading-logo {
@@ -103,4 +111,8 @@
     height: auto;
     margin-left: 2rem;
     margin-top: .8rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }

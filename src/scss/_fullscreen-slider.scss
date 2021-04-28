@@ -1,5 +1,5 @@
 .fullscreen-gallery {
-    
+
     color: white;
     position: relative;
     z-index: 1;
@@ -81,6 +81,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        flex-wrap: wrap;
+    }
 }
 
 .fullscreen-gallery__categories-link {
@@ -96,9 +100,16 @@
     font-size: 1.6rem;
     line-height: 1.9rem;
     border-radius: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        width: 111px;
+    }
+
     &:last-child {
         margin-right: 0;
     }
+
     svg {
         height: 5.4rem;
         width: auto;
@@ -107,6 +118,7 @@
         transition: fill 0.2s;
         margin-bottom: .7rem;
     }
+
     &:link,
     &:visited {
         color: white;
@@ -179,9 +191,11 @@
     transition: border-color .2s, background-color .2s, color .2s, opacity .2s;
     border-radius: 2.5rem;
     margin-right: 2rem;
+
     &:last-child {
         margin-right: 0;
     }
+
     svg {
         fill: white;
         width: 1.5rem;
