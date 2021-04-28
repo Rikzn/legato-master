@@ -25,9 +25,15 @@
     }
 
     @include breakpoint(mobile) {
-        bottom: 70%;
+        bottom: 67%;
         height: 23rem;
     }
+    @include breakpoint(supersmall-mobile) {
+        bottom: 65%;
+        height: 23rem;
+    }
+    
+    
 
 }
 
@@ -60,12 +66,16 @@
     @include breakpoint(supersmall-mobile) {
         font-size: 21px;
         line-height: 4rem;
-        padding: 5rem 2rem;
+        padding: 3rem 2rem;
     }
 }
 
 .how-to-choose__card-heading {
     margin-bottom: 3rem;
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 16px;
+    }
 }
 
 .how-to-choose__card-text {

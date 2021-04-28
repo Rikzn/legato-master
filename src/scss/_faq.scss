@@ -1,6 +1,10 @@
 .faq {
     padding: 9rem 0;
     background: #f8f8f8;
+
+    @include breakpoint(supersmall-mobile) {
+        padding: 3rem 0;
+    }
 }
 
 .faq__heading {

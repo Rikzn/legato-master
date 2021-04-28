@@ -6,6 +6,10 @@
     background-size: auto 45.7rem;
     background-position: left bottom;
 
+    @include breakpoint(supersmall-mobile) {
+        padding: 3rem 0;
+    }
+
     @include breakpoint(small-tablet) {
         background-image: none;
     }
@@ -73,6 +77,10 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        margin-top: 0;
     }
 }
 

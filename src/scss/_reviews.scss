@@ -1,6 +1,10 @@
 .reviews {
     padding: 10rem 0;
     background-color: #f8f8f8;
+
+    @include breakpoint(supersmall-mobile) {
+        padding: 3rem 0;
+    }
 }
 
 .reviews__heading {
@@ -43,6 +47,7 @@
     color: white;
     border-radius: 3rem;
     overflow: hidden;
+
     &:link,
     &:visited {
         color: white;
@@ -148,6 +153,7 @@
         position: relative;
         opacity: 1 !important;
         z-index: 1;
+
         &::before {
             content: '';
             position: absolute;

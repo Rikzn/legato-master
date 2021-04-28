@@ -1899,7 +1899,11 @@ select:-webkit-autofill:focus {
               transform: translateX(50%) translateY(50%); } }
   @media only screen and (max-width: 640px) {
     .how-to-choose__card-table {
-      bottom: 70%;
+      bottom: 67%;
+      height: 23rem; } }
+  @media only screen and (max-width: 370px) {
+    .how-to-choose__card-table {
+      bottom: 65%;
       height: 23rem; } }
 
 .how-to-choose__row {
@@ -1933,10 +1937,13 @@ select:-webkit-autofill:focus {
     .how-to-choose__card {
       font-size: 21px;
       line-height: 4rem;
-      padding: 5rem 2rem; } }
+      padding: 3rem 2rem; } }
 
 .how-to-choose__card-heading {
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 370px) {
+    .how-to-choose__card-heading {
+      font-size: 16px; } }
 
 .how-to-choose__card-text {
   font-size: 2.4rem;
@@ -2190,6 +2197,9 @@ select:-webkit-autofill:focus {
 .faq {
   padding: 9rem 0;
   background: #f8f8f8; }
+  @media only screen and (max-width: 370px) {
+    .faq {
+      padding: 3rem 0; } }
 
 .faq__heading {
   margin-bottom: 5rem;
@@ -2640,9 +2650,11 @@ select:-webkit-autofill:focus {
           flex-direction: column; }
   @media only screen and (max-width: 768px) {
     .special__promo-list-item {
-      width: 250px; }
+      width: 250px;
+      margin-right: 15px; }
       .special__promo-list-item:last-child {
-        padding-right: 15px; } }
+        padding-right: 15px;
+        margin-right: 0; } }
 
 .special__promo-card,
 .special__get-discount {
@@ -3133,6 +3145,9 @@ select:-webkit-autofill:focus {
 .reviews {
   padding: 10rem 0;
   background-color: #f8f8f8; }
+  @media only screen and (max-width: 370px) {
+    .reviews {
+      padding: 3rem 0; } }
 
 .reviews__heading {
   text-align: center;
@@ -3313,6 +3328,9 @@ select:-webkit-autofill:focus {
   background-repeat: no-repeat;
   background-size: auto 45.7rem;
   background-position: left bottom; }
+  @media only screen and (max-width: 370px) {
+    .delivery {
+      padding: 3rem 0; } }
   @media only screen and (max-width: 768px) {
     .delivery {
       background-image: none; } }
@@ -3371,6 +3389,9 @@ select:-webkit-autofill:focus {
   margin-top: 3rem; }
   .delivery__options-list-item:last-child {
     margin-right: 0; }
+  @media only screen and (max-width: 370px) {
+    .delivery__options-list-item {
+      margin-top: 0; } }
 
 .delivery__options-logo {
   width: 16rem;
@@ -3991,6 +4012,9 @@ select:-webkit-autofill:focus {
               flex-direction: column;
       background: transparent;
       border-radius: 0; } }
+  @media only screen and (max-width: 370px) {
+    .calculator__card {
+      padding: 0; } }
 
 .calculator__card-col {
   display: -webkit-box;
