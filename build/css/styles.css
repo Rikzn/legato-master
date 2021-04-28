@@ -2651,7 +2651,8 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 768px) {
     .special__promo-list-item {
       width: 250px;
-      margin-right: 15px; }
+      margin-right: 15px;
+      background-color: red; }
       .special__promo-list-item:last-child {
         padding-right: 15px;
         margin-right: 0; } }
