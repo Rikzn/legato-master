@@ -80,13 +80,23 @@
     flex-grow: 1;
 
     @include breakpoint(small-tablet) {
-        background-color: #fff;
+        background-color: rgba(black, .4);
         position: absolute;
         top: 0;
         left: 0;
         height: 100vh;
-        padding-left: 20px;
-        width: 80vw;
+        width: 100vw;
+        opacity: 0;
+        // display: none;
+        transition: 0.3s;
+        z-index: -1;
+
+        &.open {
+            opacity: 1;
+            // display: block;
+            transition: 0.3s;
+            z-index: 1;
+        }
     }
 
     &>img {
@@ -95,9 +105,52 @@
         @include breakpoint(small-tablet) {
             display: block;
             margin-top: 3.2rem;
-            max-width: 15.6rem;
-            height: 3.6rem;
+            max-width: 156px;
+            height: 36px;
             margin-bottom: 7rem;
+        }
+
+    }
+
+    &-close {
+        display: none;
+
+        @include breakpoint(small-tablet) {
+            position: relative;
+            display: block;
+            color: #231F20;
+            font-size: 25px;
+            transform: rotate(90deg);
+            margin-left: auto;
+
+        }
+    }
+
+    &-inner {
+        @include breakpoint(small-tablet) {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: baseline;
+            padding: 0 20px;
+            height: 100%;
+            width: 80vw;
+            background-color: #fff;
+            transform: translateX(-45vh);
+            transition: 0.4s;
+
+            &.open {
+                left: 0;
+                transform: translateX(0);
+                transition: 0.4s;
+            }
+
+            &>div {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
         }
 
     }
@@ -109,13 +162,20 @@
         grid-template-areas:
             "whatsapp-link phone-link "
             " whatsapp-link phone-link-text";
+        max-width: fit-content;
 
         .page-header__phone-link {
             color: #231F20;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
         }
 
         .page-header__phone-link-text {
             color: #231F20;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
         }
     }
 }
@@ -152,6 +212,10 @@
     @include breakpoint(small-tablet) {
         color: #231F20;
         margin-bottom: 32px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        white-space: nowrap;
 
         &:last-child {
             margin-bottom: 0;

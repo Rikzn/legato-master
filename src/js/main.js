@@ -41,5 +41,21 @@ window.addEventListener('load', function () {
     setTimeout(() => document.body.classList.add('animatable'), 300)
 })
 
+// открывание меню на главной странице
+const openMenu = document.querySelector('.menu');
+const closeBtn = document.querySelector('.page-header__menu-close');
+const overlay = document.querySelector('.page-header__menu');
 
+openMenu.addEventListener('click', () => {
+    document.querySelector('.page-header__menu').classList.add('open');
+    document.querySelector('.page-header__menu-inner').classList.add('open');
+})
+
+closeBtn.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+
+function closeMenu() {
+    document.querySelector('.page-header__menu').classList.remove('open');
+    document.querySelector('.page-header__menu-inner').classList.remove('open');
+}
 
