@@ -156,6 +156,11 @@
     width: 50%;
     flex-grow: 1;
     margin-left: -2.8rem;
+
+    @include breakpoint(mobile) {
+        overflow-x: auto;
+        margin-right: -50px;
+    }
 }
 
 .surface-types__slider-nav-link {

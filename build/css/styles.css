@@ -1381,6 +1381,33 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  @media only screen and (max-width: 768px) {
+    .page-header__menu {
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      padding-left: 20px;
+      width: 80vw; } }
+  .page-header__menu > img {
+    display: none; }
+    @media only screen and (max-width: 768px) {
+      .page-header__menu > img {
+        display: block;
+        margin-top: 3.2rem;
+        max-width: 15.6rem;
+        height: 3.6rem;
+        margin-bottom: 7rem; } }
+  .page-header__menu .page-header__contacts-block {
+    margin-left: 0;
+    display: inline-grid;
+    margin-top: 7rem;
+    grid-template-areas: "whatsapp-link phone-link " " whatsapp-link phone-link-text"; }
+    .page-header__menu .page-header__contacts-block .page-header__phone-link {
+      color: #231F20; }
+    .page-header__menu .page-header__contacts-block .page-header__phone-link-text {
+      color: #231F20; }
 
 .page-header__nav {
   display: -webkit-box;
@@ -1388,7 +1415,15 @@ select:-webkit-autofill:focus {
   display: flex; }
   @media only screen and (max-width: 768px) {
     .page-header__nav {
-      display: none; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      max-width: 170px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 2px; } }
 
 .page-header__nav-link {
   position: relative;
@@ -1403,6 +1438,12 @@ select:-webkit-autofill:focus {
   margin: .5rem;
   margin-right: 1.5rem;
   color: white; }
+  @media only screen and (max-width: 768px) {
+    .page-header__nav-link {
+      color: #231F20;
+      margin-bottom: 32px; }
+      .page-header__nav-link:last-child {
+        margin-bottom: 0; } }
   .page-header__nav-link > div {
     -webkit-transition: 0.2s;
     transition: 0.2s; }
@@ -1428,6 +1469,9 @@ select:-webkit-autofill:focus {
     transition: 0.2s; }
   .page-header__nav-link:link, .page-header__nav-link:visited {
     color: white; }
+    @media only screen and (max-width: 768px) {
+      .page-header__nav-link:link, .page-header__nav-link:visited {
+        color: #231F20; } }
   .page-header.fixed .page-header__nav-link {
     color: var(--text-color); }
     .page-header.fixed .page-header__nav-link:link, .page-header.fixed .page-header__nav-link:visited {
@@ -1455,6 +1499,9 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 1260px) {
     .page-header__contacts-block {
       grid-column-gap: 1.5rem; } }
+  @media only screen and (max-width: 768px) {
+    .page-header__contacts-block {
+      margin-left: auto; } }
 
 .page-header__phone-link {
   font-weight: bold;
@@ -2651,11 +2698,16 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 768px) {
     .special__promo-list-item {
       width: 250px;
-      margin-right: 15px;
-      background-color: red; }
+      margin-right: 30px; }
       .special__promo-list-item:last-child {
         padding-right: 15px;
         margin-right: 0; } }
+  @media only screen and (max-width: 640px) {
+    .special__promo-list-item {
+      margin-right: 20px; } }
+  @media only screen and (max-width: 370px) {
+    .special__promo-list-item {
+      margin-right: 15px; } }
 
 .special__promo-card,
 .special__get-discount {
@@ -2886,6 +2938,10 @@ select:-webkit-autofill:focus {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-left: -2.8rem; }
+  @media only screen and (max-width: 640px) {
+    .surface-types__slider-nav {
+      overflow-x: auto;
+      margin-right: -50px; } }
 
 .surface-types__slider-nav-link {
   padding: 1.8rem 2.8rem;
@@ -2993,6 +3049,9 @@ select:-webkit-autofill:focus {
 
 .table-comparison {
   padding: 10rem 0; }
+  @media only screen and (max-width: 640px) {
+    .table-comparison {
+      padding: 10rem 0; } }
   .table-comparison table,
   .table-comparison thead,
   .table-comparison tbody,
@@ -3013,6 +3072,9 @@ select:-webkit-autofill:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column-gap: 8rem;
     position: relative; }
+    @media only screen and (max-width: 640px) {
+      .table-comparison tr {
+        grid-column-gap: 4rem; } }
   .table-comparison tbody tr {
     position: relative; }
     .table-comparison tbody tr::before {
@@ -3036,7 +3098,8 @@ select:-webkit-autofill:focus {
     padding: 1.4rem 0; }
     @media only screen and (max-width: 640px) {
       .table-comparison td {
-        padding: 1rem 0; } }
+        padding: 1rem 0;
+        font-size: 14px; } }
   .table-comparison td:first-child {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3082,6 +3145,10 @@ select:-webkit-autofill:focus {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 640px) {
+    .table-comparison__heading {
+      font-size: 14px;
+      margin-bottom: 2.5rem; } }
 
 .table-comparison__heading-logo {
   width: 10rem;
@@ -3092,7 +3159,10 @@ select:-webkit-autofill:focus {
   margin-top: .8rem; }
   @media only screen and (max-width: 640px) {
     .table-comparison__heading-logo {
-      display: none; } }
+      position: absolute;
+      top: -5rem;
+      margin-left: 0;
+      width: 70px; } }
 
 .advantage {
   background-color: #f6f6f7;
@@ -3655,19 +3725,21 @@ select:-webkit-autofill:focus {
     .photo-comparison__card-col {
       height: 320px; }
       .photo-comparison__card-col:first-child {
-        margin-bottom: 45px; } }
+        margin-bottom: 0; } }
   @media only screen and (max-width: 370px) {
     .photo-comparison__card-col {
       height: 212px; }
       .photo-comparison__card-col:first-child {
-        height: 280px; } }
+        height: 320px; } }
 
 .photo-comparison__card-content {
   padding: 7.2rem; }
   @media only screen and (max-width: 640px) {
     .photo-comparison__card-content {
       padding-top: 18px;
-      padding-bottom: 32px; } }
+      padding-bottom: 32px;
+      padding-left: 20px;
+      padding-right: 20px; } }
   @media only screen and (max-width: 370px) {
     .photo-comparison__card-content {
       padding-left: 1.5rem;
@@ -3678,7 +3750,8 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .photo-comparison__heading {
       font-size: 22px;
-      margin-bottom: 1.6rem; } }
+      margin-bottom: 1.6rem;
+      line-height: 26px; } }
   @media only screen and (max-width: 370px) {
     .photo-comparison__heading {
       font-size: 16px;
@@ -3845,7 +3918,7 @@ select:-webkit-autofill:focus {
           flex-direction: column; }
   @media only screen and (max-width: 768px) {
     .fullscreen-gallery__content {
-      padding: 20rem 0; } }
+      padding: 30rem 0 10rem 0; } }
 
 .fullscreen-gallery__heading {
   margin-bottom: 5rem; }
@@ -3887,7 +3960,9 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .fullscreen-gallery__categories-link {
       margin-right: 0;
-      width: 111px; } }
+      width: 111px;
+      -ms-flex-preferred-size: 33%;
+          flex-basis: 33%; } }
   .fullscreen-gallery__categories-link:last-child {
     margin-right: 0; }
   .fullscreen-gallery__categories-link svg {
@@ -3942,6 +4017,9 @@ select:-webkit-autofill:focus {
   font-size: 2.4rem;
   line-height: 4.3rem;
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 640px) {
+    .fullscreen-gallery__inner-slider-card-text {
+      line-height: 24px; } }
 
 .fullscreen-gallery__inner-slider-card-link {
   -ms-flex-item-align: start;
@@ -3993,7 +4071,9 @@ select:-webkit-autofill:focus {
   background-color: #f8f8f8; }
   @media only screen and (max-width: 768px) {
     .calculator {
-      padding: 0; } }
+      padding: 0;
+      padding-top: 32px;
+      padding-bottom: 32px; } }
 
 .calculator__card {
   background: #ffffff;
@@ -4036,7 +4116,10 @@ select:-webkit-autofill:focus {
         padding: 2.4rem 1.5rem 2.4rem 1.5rem; } }
   @media only screen and (max-width: 640px) {
     .calculator__card-col {
-      padding: 5px; } }
+      padding: 5px; }
+      .calculator__card-col:first-child {
+        margin-bottom: 1.6rem;
+        padding: 3rem 1.5rem 0 1.5rem; } }
 
 .calculator__heading {
   margin-bottom: 3.5rem; }
@@ -4498,29 +4581,33 @@ select:-webkit-autofill:focus {
   transition: width 0.3s, all 0.3s; }
   @media only screen and (max-width: 1260px) {
     .active .interior__inner {
-      width: 48vh; } }
+      width: 51vw; } }
+  @media only screen and (max-width: 1024px) {
+    .active .interior__inner {
+      width: 81vw; } }
   @media only screen and (max-width: 640px) {
     .active .interior__inner {
-      height: 94%; } }
-  .active .interior__inner::before {
-    display: none; }
-  .active .interior__inner > h4 {
-    z-index: 5;
-    position: relative;
-    margin-top: 1.6rem;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    max-width: 60rem; }
-    @media only screen and (max-width: 640px) {
+      height: 94%; }
+      .active .interior__inner::before {
+        display: none; }
+      .active .interior__inner > h4 {
+        z-index: 5;
+        position: relative;
+        margin-top: 1.6rem;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        max-width: 60rem; } }
+    @media only screen and (max-width: 640px) and (max-width: 640px) {
       .active .interior__inner > h4 {
         max-width: 50%; } }
-  .active .interior__inner > p {
-    opacity: 1;
-    -webkit-transition: opacity 0.5s, all 0.8s;
-    transition: opacity 0.5s, all 0.8s;
-    max-height: -webkit-min-content;
-    max-height: -moz-min-content;
-    max-height: min-content; }
+  @media only screen and (max-width: 640px) {
+      .active .interior__inner > p {
+        opacity: 1;
+        -webkit-transition: opacity 0.5s, all 0.8s;
+        transition: opacity 0.5s, all 0.8s;
+        max-height: -webkit-min-content;
+        max-height: -moz-min-content;
+        max-height: min-content; } }
 
 .active .interior__btn {
   -webkit-transition: 0.4s;

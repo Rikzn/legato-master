@@ -78,6 +78,46 @@
     align-self: flex-start;
     width: 50%;
     flex-grow: 1;
+
+    @include breakpoint(small-tablet) {
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        padding-left: 20px;
+        width: 80vw;
+    }
+
+    &>img {
+        display: none;
+
+        @include breakpoint(small-tablet) {
+            display: block;
+            margin-top: 3.2rem;
+            max-width: 15.6rem;
+            height: 3.6rem;
+            margin-bottom: 7rem;
+        }
+
+    }
+
+    & .page-header__contacts-block {
+        margin-left: 0;
+        display: inline-grid;
+        margin-top: 7rem;
+        grid-template-areas:
+            "whatsapp-link phone-link "
+            " whatsapp-link phone-link-text";
+
+        .page-header__phone-link {
+            color: #231F20;
+        }
+
+        .page-header__phone-link-text {
+            color: #231F20;
+        }
+    }
 }
 
 .page-header__nav {
@@ -85,7 +125,13 @@
 
     // flex-wrap: wrap;
     @include breakpoint(small-tablet) {
-        display: none;
+        flex-direction: column;
+        max-width: 170px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 2px;
+
     }
 
 }
@@ -102,6 +148,15 @@
     margin: .5rem;
     margin-right: 1.5rem;
     color: white;
+
+    @include breakpoint(small-tablet) {
+        color: #231F20;
+        margin-bottom: 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     &>div {
         transition: 0.2s;
@@ -133,6 +188,10 @@
     &:link,
     &:visited {
         color: white;
+
+        @include breakpoint(small-tablet) {
+            color: #231F20;
+        }
     }
 
 
@@ -174,6 +233,10 @@
 
     @include breakpoint(laptop) {
         grid-column-gap: 1.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-left: auto;
     }
 }
 
