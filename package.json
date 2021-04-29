@@ -31,7 +31,8 @@
     "parsleyjs": "^2.9.2",
     "phantomjs-prebuilt": "^2.1.16",
     "smoothscroll-polyfill": "^0.4.4",
-    "swiper": "^6.3.2"
+    "swiper": "^6.3.2",
+    "validator": "^13.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

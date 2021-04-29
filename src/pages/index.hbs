@@ -1838,7 +1838,7 @@
         <form action="#" class="modal-form">
             <div class="modal-form__input">
                 <input type="text" placeholder="Имя*">
-                <input type="text" placeholder="Телефон*">
+                <input type="text" class="js-phone-input phone" placeholder="Телефон*">
             </div>
             <textarea name="" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
             <div class="modal-form__footer">
@@ -1847,7 +1847,19 @@
             </div>
         </form>
     </div>
-    .
+    <div class="thanks">
+        <svg width="14" height="14" aria-hidden="true" class="icon-question">
+            <use xlink:href="#checked"></use>
+        </svg>
+        <div class="thanks__title">
+            Спасибо за заявку!
+        </div>
+        <div class="thanks__subtitle">
+            Ваши данные успешно отправлены.
+            Мы свяжемся с вами в ближайшее время.
+        </div>
+        <a href="#" class="thanks__btn btn">Вернуться к просмотру</a>
+    </div>
 </div>
 {{/content}}
 {{/extend}}

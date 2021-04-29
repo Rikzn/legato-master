@@ -17,6 +17,7 @@ import fullscreenGallery from './fullscreenGallery';
 import anchorLinks from './anchorLinks';
 import modal from './modal';
 
+
 document.addEventListener('DOMContentLoaded', function () {
     polyfills();
     detectTouch();
