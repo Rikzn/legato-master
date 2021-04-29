@@ -1,9 +1,29 @@
 .glass {
     padding: 10rem 0;
     background: #F8F8F8;
-    @include breakpoint(supersmall-mobile) {
-        padding: 0;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 32px 0;
     }
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     background-color: red;
+    //     width: 50%;
+    //     height: 50%;
+    // }
+
+    // &:hover {
+    //     &::before {
+    //         background-color: green;
+
+    //         .glass__card-link {
+    //             opacity: 1;
+    //         }
+    //     }
+    // }
 }
 
 .glass__card {
