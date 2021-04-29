@@ -15,6 +15,7 @@ import introAnimation from './introAnimation';
 import photoComparisonSlider from './photoComparisonSlider';
 import fullscreenGallery from './fullscreenGallery';
 import anchorLinks from './anchorLinks';
+import modal from './modal';
 
 document.addEventListener('DOMContentLoaded', function () {
     polyfills();
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     reviewsSlider();
     introAnimation();
     photoComparisonSlider();
+    modal();
 
     fullscreenGallery();
     anchorLinks();

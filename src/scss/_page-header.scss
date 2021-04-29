@@ -99,7 +99,7 @@
         }
     }
 
-    &>img {
+    & img {
         display: none;
 
         @include breakpoint(small-tablet) {
@@ -156,26 +156,37 @@
     }
 
     & .page-header__contacts-block {
-        margin-left: 0;
-        display: inline-grid;
-        margin-top: 7rem;
-        grid-template-areas:
-            "whatsapp-link phone-link "
-            " whatsapp-link phone-link-text";
-        max-width: fit-content;
+        display: none;
+
+        @include breakpoint(small-tablet) {
+            margin-left: 0;
+            display: inline-grid;
+            margin-top: 7rem;
+            grid-template-areas:
+                "whatsapp-link phone-link "
+                " whatsapp-link phone-link-text";
+            max-width: fit-content;
+        }
+
 
         .page-header__phone-link {
-            color: #231F20;
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 24px;
+            @include breakpoint(small-tablet) {
+                color: #231F20;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
         }
 
         .page-header__phone-link-text {
-            color: #231F20;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 19px;
+            @include breakpoint(small-tablet) {
+                color: #231F20;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+            }
+
         }
     }
 }
