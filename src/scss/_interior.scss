@@ -41,7 +41,6 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 49rem 49rem;
         grid-column-gap: 5%;
-        grid-row-gap: 5%;
         align-items: stretch;
 
         @include breakpoint(laptop) {
@@ -65,6 +64,7 @@
         border-radius: 1.7rem;
         display: flex;
         transition: 0.5s;
+        margin-bottom: 5.4rem;
 
         &:nth-child(3n+3) {
             .interior__inner {

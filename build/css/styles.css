@@ -4602,7 +4602,6 @@ select:-webkit-autofill:focus {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 49rem 49rem;
     grid-column-gap: 5%;
-    grid-row-gap: 5%;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
@@ -4624,7 +4623,8 @@ select:-webkit-autofill:focus {
     display: -ms-flexbox;
     display: flex;
     -webkit-transition: 0.5s;
-    transition: 0.5s; }
+    transition: 0.5s;
+    margin-bottom: 5.4rem; }
     .interior__item:nth-child(3n+3) .interior__inner {
       right: 0; }
     @media only screen and (max-width: 1024px) {
