@@ -1998,13 +1998,14 @@ select:-webkit-autofill:focus {
   background-color: var(--primary-color);
   color: white;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  overflow: hidden; }
 
 .how-to-choose__card-table {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 45rem;
+  right: 4rem;
+  bottom: -22rem;
+  height: 66rem;
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -4542,7 +4543,8 @@ select:-webkit-autofill:focus {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 49rem 49rem;
-    grid-gap: 5%;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }

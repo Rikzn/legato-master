@@ -40,7 +40,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 49rem 49rem;
-        grid-gap: 5%;
+        grid-column-gap: 5%;
+        grid-row-gap: 5%;
         align-items: stretch;
 
         @include breakpoint(laptop) {

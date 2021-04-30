@@ -4,13 +4,14 @@
     color: white;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .how-to-choose__card-table {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 45rem;
+    right: 4rem;
+    bottom: -22rem;
+    height: 66rem;
     width: auto;
     object-fit: contain;
     object-position: right bottom;
