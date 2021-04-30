@@ -4625,6 +4625,9 @@ select:-webkit-autofill:focus {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     margin-bottom: 5.4rem; }
+    @media only screen and (max-width: 1260px) {
+      .interior__item {
+        margin-bottom: 4px; } }
     .interior__item:nth-child(3n+3) .interior__inner {
       right: 0; }
     @media only screen and (max-width: 1024px) {
@@ -4781,8 +4784,8 @@ select:-webkit-autofill:focus {
         max-width: 50%; } }
   .active .interior__inner > p {
     opacity: 1;
-    -webkit-transition: opacity 0.5s, all 0.8s;
-    transition: opacity 0.5s, all 0.8s;
+    -webkit-transition: opacity 0.5s, all 0.3s;
+    transition: opacity 0.5s, all 0.3s;
     max-height: -webkit-min-content;
     max-height: -moz-min-content;
     max-height: min-content; }
