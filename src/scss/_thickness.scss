@@ -34,11 +34,10 @@
     flex-direction: column;
 
     @include breakpoint(small-tablet) {
-        margin-bottom: 11rem;
-        background-color: red;
+        margin-bottom: 5rem;
 
         &:last-child {
-            margin-bottom: 5rem;
+            margin-bottom: 0rem;
         }
     }
 }

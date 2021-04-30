@@ -16,6 +16,7 @@ import photoComparisonSlider from './photoComparisonSlider';
 import fullscreenGallery from './fullscreenGallery';
 import anchorLinks from './anchorLinks';
 import modal from './modal';
+import addContent from './addContent';
 
 
 document.addEventListener('DOMContentLoaded', function () {
