@@ -3763,7 +3763,7 @@ select:-webkit-autofill:focus {
      -moz-column-break-inside: avoid;
           break-inside: avoid;
   margin-bottom: 3rem; }
-  .why-us__difference-list-item .item-close {
+  .why-us__difference-list-item.item-close {
     display: none; }
   .why-us__difference-list-item::before {
     content: '';
