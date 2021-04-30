@@ -2477,7 +2477,7 @@ select:-webkit-autofill:focus {
           flex-direction: column; }
   @media only screen and (max-width: 768px) {
     .thickness__list-item {
-      margin-bottom: 10rem;
+      margin-bottom: 11rem;
       background-color: red; }
       .thickness__list-item:last-child {
         margin-bottom: 5rem; } }
