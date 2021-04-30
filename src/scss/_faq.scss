@@ -21,13 +21,21 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2.8rem;
 
+
+
     @include breakpoint(small-tablet) {
         grid-template-columns: 1fr;
+    }
 
-        &>.faq__col:last-child {
+}
+
+.faq__col {
+    @include breakpoint(small-tablet) {
+        &.item-close {
             display: none;
         }
     }
+
 }
 
 .faq__questions-list {}

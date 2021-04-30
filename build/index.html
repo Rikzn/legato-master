@@ -37,28 +37,28 @@
                                 <div class="page-header__menu-close">&#10006;</div>
                             </div>
                             <nav class="page-header__nav">
-                                <a href="#" class="page-header__nav-link" data-text="Описание">
+                                <a href="#to-description" class="page-header__nav-link" data-text="Описание">
                                     <div>Описание</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Применение">
+                                <a href="#to-application" class="page-header__nav-link" data-text="Применение">
                                     <div>Применение</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Виды">
+                                <a href="#to-view" class="page-header__nav-link" data-text="Виды">
                                     <div>Виды</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Выбрать толщину">
+                                <a href="#to-thickness" class="page-header__nav-link" data-text="Выбрать толщину">
                                     <div>Выбрать толщину</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Внешний вид">
+                                <a href="#to-appearance" class="page-header__nav-link" data-text="Внешний вид">
                                     <div>Внешний вид</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Свойства">
+                                <a href="#to-attribute" class="page-header__nav-link" data-text="Свойства">
                                     <div>Свойства</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Расчет стоимости">
+                                <a href="#to-calculator" class="page-header__nav-link" data-text="Расчет стоимости">
                                     <div>Расчет стоимости</div>
                                 </a>
-                                <a href="#" class="page-header__nav-link" data-text="Отзывы">
+                                <a href="#to-feedback" class="page-header__nav-link" data-text="Отзывы">
                                     <div>Отзывы</div>
                                 </a>
                             </nav>
@@ -158,7 +158,7 @@
 </section>
 
 
-<section class="photo-comparison">
+<section class="photo-comparison" id="description">
     <div class="container">
         <div class="photo-comparison__card">
             <div class="photo-comparison__card-col">
@@ -176,9 +176,17 @@
                             мебель, чтобы ее защитить!
                         </p>
                     </div>
-                    <a href="#to-calculator" class="btn photo-comparison__link">
-                        Рассчитать стоимость
-                    </a>
+                    <div class="photo-comparison-btn">
+                        <a href="#to-calculator" class="btn photo-comparison__link">
+                            Рассчитать стоимость
+                        </a>
+                        <a href="#" class="photo-comparison-consultation js-modal-open">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-question">
+                                <use xlink:href="#question"></use>
+                            </svg>
+                            <span>Получить консультацию</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="photo-comparison__card-col">
@@ -309,8 +317,9 @@
                                             офисной мебели.
                                         </p>
                                     </div>
-                                    <a href="#to-calculator" class="btn fullscreen-gallery__inner-slider-card-link">
-                                        Рассчитать стоимость
+                                    <a href="#"
+                                        class="btn fullscreen-gallery__inner-slider-card-link js-modal-open-textarea">
+                                        Заказать в один клик
                                     </a>
                                 </div>
                             </div>
@@ -325,8 +334,9 @@
                                             использованию и долгому сроку эксплуатации.
                                         </p>
                                     </div>
-                                    <a href="#to-calculator" class="btn fullscreen-gallery__inner-slider-card-link">
-                                        Рассчитать стоимость
+                                    <a href="#"
+                                        class="btn fullscreen-gallery__inner-slider-card-link js-modal-open-textarea">
+                                        Заказать в один клик
                                     </a>
                                 </div>
                             </div>
@@ -345,8 +355,9 @@
                                             офисной мебели.
                                         </p>
                                     </div>
-                                    <a href="#to-calculator" class="btn fullscreen-gallery__inner-slider-card-link">
-                                        Рассчитать стоимость
+                                    <a href="#"
+                                        class="btn fullscreen-gallery__inner-slider-card-link js-modal-open-textarea">
+                                        Заказать в один клик
                                     </a>
                                 </div>
                             </div>
@@ -361,8 +372,9 @@
                                             использованию и долгому сроку эксплуатации.
                                         </p>
                                     </div>
-                                    <a href="#to-calculator" class="btn fullscreen-gallery__inner-slider-card-link">
-                                        Рассчитать стоимость
+                                    <a href="#"
+                                        class="btn fullscreen-gallery__inner-slider-card-link js-modal-open-textarea">
+                                        Заказать в один клик
                                     </a>
                                 </div>
                             </div>
@@ -381,8 +393,9 @@
                                             офисной мебели.
                                         </p>
                                     </div>
-                                    <a href="#to-calculator" class="btn fullscreen-gallery__inner-slider-card-link">
-                                        Рассчитать стоимость
+                                    <a href="#"
+                                        class="btn fullscreen-gallery__inner-slider-card-link js-modal-open-textarea">
+                                        Заказать в один клик
                                     </a>
                                 </div>
                             </div>
@@ -567,15 +580,15 @@
                         идеально лежит на поверхности стола и не ерзает!
                     </p>
                 </div>
-                <a href="#to-calculator" class="btn advantage__link">
-                    Рассчитать стоимость
+                <a href="#" class="btn advantage__link js-modal-open-textarea">
+                    Узнать как получить скидку
                 </a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="interior">
+<section class="interior" id="application">
     <div class="container">
         <div class="interior__wrapper">
             <h2 class="interior__title section-heading">Прозрачная скатерть впишется в любой интерьер</h2>
@@ -715,7 +728,7 @@
     </div>
 </section>
 
-<section class="glass">
+<section class="glass" id="view">
     <div class="container">
         <div class="glass__card">
             <div class="glass__card-top-row">
@@ -793,7 +806,7 @@
     </div>
 </section>
 
-<section class="thickness">
+<section class="thickness" id="thickness">
     <div class="container">
         <h2 class="section-heading thickness__heading">
             Силиконовая скатерть на стол – Какую толщину выбрать?
@@ -922,7 +935,7 @@
 </section>
 
 
-<section class="surface-types">
+<section class="surface-types" id="appearance">
     <div class="container">
         <h2 class="section-heading surface-types__heading">
             Как выглядит силиконовая скатерть на разных поверхностях
@@ -963,7 +976,7 @@
             </div>
             <div class="surface-types__slider-controls">
                 <div class="surface-types__slider-nav">
-                    <a href="#" class="surface-types__slider-nav-link">
+                    <a href="#to-one" class="surface-types__slider-nav-link">
                         Стеклянный стол
                     </a>
                     <a href="#" class="surface-types__slider-nav-link">
@@ -1011,6 +1024,17 @@
                         на стол гарантированно защитит предметы интерьераот царапин и прочих повреждений.
                     </p>
                 </div>
+                <div class="surface-types__card-btns how-to-choose__card-btns">
+                    <a href="#to-calculator" class="btn how-to-choose__card-btn">
+                        Заказть звонок консультанта
+                    </a>
+                    <a href="#" class="how-to-choose__card-btn how-to-choose__card-write-btn">
+                        <span>Оставить отзыв</span>
+                        <svg width="14" height="14" aria-hidden="true" class="icon-question">
+                            <use xlink:href="#question"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="surface-types__col">
                 <ul class="surface-types__advantages-list">
@@ -1055,7 +1079,7 @@
 </section>
 
 
-<section class="why-us">
+<section class="why-us" id="attribute">
     <div class="container">
         <div class="why-us__top-row">
             <div class="why-us__content">
@@ -1148,7 +1172,7 @@
                 В отличие от китайских покрытий наша прозрачная пленка на стол имеет плотную структуру (сложно прорезать
                 насквозь), нет едкого запаха, не слипается!
             </h3>
-            <ul class="why-us__difference-list">
+            <ul class="why-us__difference-list js-add-content">
                 <li class="why-us__difference-list-item">
                     Прозрачная пленка отлично лежит под собственным весом, не скользит.
                 </li>
@@ -1190,7 +1214,7 @@
                     Легко подрезается после усадки.
                 </li>
             </ul>
-            <div class="why-us__next s-add-content">Показать еще</div>
+            <div class="why-us__next">Показать еще</div>
         </div>
     </div>
 </section>
@@ -1383,7 +1407,7 @@
     </div>
 </section>
 
-<section class="reviews">
+<section class="reviews" id="feedback">
     <div class="container">
         <h2 class="section-heading reviews__heading">
             Гибкое стекло для стола - наши отзывы
@@ -1515,6 +1539,17 @@
                         </div>
                     </li>
                 </ul>
+                <div class="surface-types__card-btns how-to-choose__card-btns">
+                    <a href="#to-calculator" class="btn how-to-choose__card-btn">
+                        Заказть звонок консультанта
+                    </a>
+                    <a href="#" class="how-to-choose__card-btn how-to-choose__card-write-btn">
+                        <span>Оставить отзыв</span>
+                        <svg width="14" height="14" aria-hidden="true" class="icon-question">
+                            <use xlink:href="#question"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -1645,7 +1680,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="faq__col">
+            <div class="faq__col item-close">
                 <ul class="faq__questions-list">
 
                     <li class="faq__questions-list-item">
@@ -1766,7 +1801,7 @@
                 </ul>
             </div>
         </div>
-        <div class="faq__next s-add-content">
+        <div class="faq__next">
             Показать еще
         </div>
     </div>
@@ -1934,7 +1969,7 @@
             </div>
             <textarea name="" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
             <div class="modal-form__footer">
-                <p>Нажимая «Заказать звонок», вы соглашаетесь с политикой конфиденциальности</p>
+                <p>Нажимая «Заказать звонок», вы соглашаетесь с обработкой персональных данных</p>
                 <button class="btn">Заказать звонок</button>
             </div>
         </form>

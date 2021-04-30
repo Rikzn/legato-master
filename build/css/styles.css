@@ -2169,7 +2169,7 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 7rem; }
+  margin-top: 4.6rem; }
 
 .how-to-choose__card-btn {
   margin-right: 2.4rem; }
@@ -2338,9 +2338,11 @@ select:-webkit-autofill:focus {
   grid-gap: 2.8rem; }
   @media only screen and (max-width: 768px) {
     .faq__row {
-      grid-template-columns: 1fr; }
-      .faq__row > .faq__col:last-child {
-        display: none; } }
+      grid-template-columns: 1fr; } }
+
+@media only screen and (max-width: 768px) {
+  .faq__col.item-close {
+    display: none; } }
 
 .faq__questions-list-item {
   -webkit-column-break-inside: avoid;
@@ -2639,11 +2641,6 @@ select:-webkit-autofill:focus {
     @media only screen and (max-width: 768px) {
       .glass__card-inner:nth-child(even) {
         border-radius: 0px 0px 30px 30px; } }
-  .no-touch .glass__card-inner:hover .glass__card-link {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all .2s;
-    transition: all .2s; }
 
 .glass__card-inner-bg {
   position: absolute;
@@ -2718,8 +2715,6 @@ select:-webkit-autofill:focus {
   margin-top: auto; }
 
 .glass__card-link {
-  opacity: 0;
-  visibility: hidden;
   -webkit-transition: opacity .2s, visibility 0s linear .2s, background-color .2s, color .2s;
   transition: opacity .2s, visibility 0s linear .2s, background-color .2s, color .2s;
   -ms-flex-item-align: start;
@@ -2895,6 +2890,15 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .surface-types {
       padding: 4.8rem 0; } }
+
+.surface-types__card-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7rem; }
 
 .surface-types__heading {
   max-width: 85rem;
@@ -3839,7 +3843,9 @@ select:-webkit-autofill:focus {
         height: 320px; } }
 
 .photo-comparison__card-content {
-  padding: 7.2rem; }
+  padding: 7.2rem;
+  padding-left: 5.9rem;
+  padding-right: 5.9rem; }
   @media only screen and (max-width: 640px) {
     .photo-comparison__card-content {
       padding-top: 18px;
@@ -3875,6 +3881,55 @@ select:-webkit-autofill:focus {
   -ms-flex-item-align: start;
       align-self: flex-start; }
 
+.photo-comparison-consultation {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  border-radius: 2rem;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: var(--nunito);
+  padding: 1.9rem 2.2rem;
+  color: var(--text-color);
+  -webkit-transition: color .2s, background-color .2s;
+  transition: color .2s, background-color .2s;
+  border: 1px solid #E4704B; }
+  .photo-comparison-consultation:link, .photo-comparison-consultation:visited {
+    color: var(--text-color); }
+  .photo-comparison-consultation svg {
+    width: 3.2rem;
+    height: 3.2rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    fill: var(--primary-color);
+    margin-right: 1.3rem;
+    -webkit-transition: fill .2s;
+    transition: fill .2s; }
+    @media only screen and (max-width: 640px) {
+      .photo-comparison-consultation svg {
+        margin-right: 0; } }
+  .no-touch .photo-comparison-consultation:hover,
+  .touch .photo-comparison-consultation:active {
+    background-color: var(--primary-color);
+    color: white; }
+    .no-touch .photo-comparison-consultation:hover svg,
+    .touch .photo-comparison-consultation:active svg {
+      fill: white; }
+
+.photo-comparison-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 .photo-comparison__slider {
   position: absolute;
   left: 0;
@@ -3900,9 +3955,12 @@ select:-webkit-autofill:focus {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px; }
+       object-fit: cover; }
+    @media only screen and (max-width: 768px) {
+      .photo-comparison__slider .cd-image-original,
+      .photo-comparison__slider .cd-image-modified {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px; } }
   .photo-comparison__slider .cd-resize-img {
     position: absolute;
     top: 0;
@@ -4592,6 +4650,12 @@ select:-webkit-autofill:focus {
             justify-content: flex-end;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
+    .interior__inner::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1; }
     @media only screen and (max-width: 640px) {
       .interior__inner {
         padding: 1.2rem; } }
@@ -4692,6 +4756,10 @@ select:-webkit-autofill:focus {
           justify-content: space-between;
   -webkit-transition: width 0.3s, all 0.3s;
   transition: width 0.3s, all 0.3s; }
+  .active .interior__inner::after {
+    background-color: rgba(255, 255, 255, 0.5);
+    left: 0;
+    top: 0; }
   @media only screen and (max-width: 1260px) {
     .active .interior__inner {
       width: calc(200% - 7%); } }
@@ -4865,6 +4933,16 @@ select:-webkit-autofill:focus {
         -ms-flex-pack: center;
             justify-content: center;
     cursor: pointer; }
+    .modal__close:hover span:first-child {
+      -webkit-transform: translate(50%, 50%) rotate(-45deg) scale(1.5);
+              transform: translate(50%, 50%) rotate(-45deg) scale(1.5);
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    .modal__close:hover span:last-child {
+      -webkit-transform: translate(-50%, 50%) rotate(45deg) scale(1.5);
+              transform: translate(-50%, 50%) rotate(45deg) scale(1.5);
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
     .modal__close > span {
       background-color: #E4704B;
       height: 1.8px;
@@ -4872,10 +4950,14 @@ select:-webkit-autofill:focus {
       display: block; }
       .modal__close > span:first-child {
         -webkit-transform: translate(50%, 50%) rotate(-45deg);
-                transform: translate(50%, 50%) rotate(-45deg); }
+                transform: translate(50%, 50%) rotate(-45deg);
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
       .modal__close > span:last-child {
         -webkit-transform: translate(-50%, 50%) rotate(45deg);
-                transform: translate(-50%, 50%) rotate(45deg); }
+                transform: translate(-50%, 50%) rotate(45deg);
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
   .modal.open {
     display: block; }
 
